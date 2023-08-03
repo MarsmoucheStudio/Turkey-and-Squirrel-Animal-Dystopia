@@ -2,6 +2,11 @@
 const { app, BrowserWindow, shell, screen, dialog } = require('electron');
 const path = require('path');
 
+require('update-electron-app')({
+    repo: 'MarsmoucheStudio/Turkey-and-Squirrel-Animal-Dystopia',
+    updateInterval: '1 hour',
+    logger: require('electron-log')
+})
 const isWindows = process.platform === 'win32';
 const isMac = process.platform === 'darwin';
 const isLinux = process.platform === 'linux';
